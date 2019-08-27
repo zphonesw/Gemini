@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 require 'gemini'
-
+require 'set'
 
 module Gemini
   class Lexer
-    RESERVED_WORDS = Set.new(['lambda?', 'lambda', 'self', 'nil', 'true', 'yes',
+    RESERVED_WORDS = Set.new(['holder', 'proc', 'self', 'nil', 'true', 'yes',
                               'on', 'false', 'no', 'off', 'next', 'break',
                               'return'])
 
