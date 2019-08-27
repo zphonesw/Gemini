@@ -1,4 +1,5 @@
 module TOKEN
-  TOKENS_RE = {:whitespace => /[\s]/,
+  TOKENS_CH = {:whitespace => /[\s]/,
                :str => /[\w]/,}
+  
 end
