@@ -1,1 +1,18 @@
-srcprint "Hello World"
+let n = 1
+let n2 = 2 
+
+src_print "Hello World"
+
+let fds = n + n2
+
+!! Functions
+
+function test <:
+
+return[#foo]
+
+end
+
+n n2 +
+
+src_puts (.stack)
