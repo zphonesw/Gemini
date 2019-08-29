@@ -29,10 +29,10 @@ module Gemini
             puts "#{index.to_s.strip}:#{i}"
            
            }
-           puts "CHARACTERS FOUND:#{lexems.size}"
+           puts "CHARACTERS FOUND:#{@code.size}"
            return lexems
        end
 end
-
+end
 $GEMINI = Gemini::Lexer.new($code).tokenize
-puts $GEMINI.map(&:to_s)
+puts $GEMINI
