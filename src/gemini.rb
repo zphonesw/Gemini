@@ -1,3 +1,4 @@
+$code = gets
 module Gemini
   $tokens = []
   class Lexer
@@ -32,3 +33,6 @@ module Gemini
            return lexems
        end
 end
+
+$GEMINI = Gemini::Lexer.new($code).tokenize
+puts $GEMINI.map(&:to_s)
