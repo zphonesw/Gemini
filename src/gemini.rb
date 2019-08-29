@@ -1,8 +1,12 @@
+require "lang/functions"
+
 $code = gets
+
 module Gemini
   $tokens = []
   $IDENTIFIERS = [:VARIABLE, :IF_STATEMENT,:FUNCTION_STATEMENT,:INTEGER,:STRING,:LITERAL,:SYMBOL,:ASSIGN,:COMMENT]
   $KEYWORDS_RE = [".stack","let","if","end","function","lambda","TRUE","FALSE","ON","OFF","YES","OFF","NIL","VOID",".values"]
+ 
   class Lexer
             attr_accessor :code
             def initialize(code)
