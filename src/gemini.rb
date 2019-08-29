@@ -13,4 +13,22 @@ module Gemini
             end
             $tokens
         end
+         def getToken
+            $ctok = " "
+            puts "LEXER:"
+           lexems = @code.scan(/\w+|\W+/) {|tok,i|
+           index = tok.split(' ').map(&:to_s)
+           i = index.size
+             
+           if index=="\"\'" then
+              index.push("STRING,true")
+           end
+             
+           chunk = index[i..-1]
+            puts "#{index.to_s.strip}:#{i}"
+           
+           }
+           puts "CHARACTERS FOUND:#{lexems.size}"
+           return lexems
+       end
 end
